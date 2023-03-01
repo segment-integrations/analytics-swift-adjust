@@ -1,0 +1,34 @@
+{
+  "object": {
+    "pins": [
+      {
+        "package": "Segment",
+        "repositoryURL": "https://github.com/segmentio/analytics-swift.git",
+        "state": {
+          "branch": null,
+          "revision": "1b4fe3f314404d3e7458428493ce5f01adf2eed7",
+          "version": "1.3.5"
+        }
+      },
+      {
+        "package": "Adjust",
+        "repositoryURL": "https://github.com/adjust/ios_sdk",
+        "state": {
+          "branch": null,
+          "revision": "6ae03883c3b7d22e72e2a5937ad5dd8765d9c31d",
+          "version": "4.33.4"
+        }
+      },
+      {
+        "package": "Sovran",
+        "repositoryURL": "https://github.com/segmentio/Sovran-Swift.git",
+        "state": {
+          "branch": null,
+          "revision": "944c17d7c46bd95fc37f09136cabd172be5b413b",
+          "version": "1.0.3"
+        }
+      }
+    ]
+  },
+  "version": 1
+}
