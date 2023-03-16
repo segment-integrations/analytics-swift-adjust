@@ -187,6 +187,6 @@ extension AdjustDestination: AdjustDelegate {
             "campaign": campaign
         ]
         
-        analytics?.track(name: "Install Attributed", properties: properties)
+       // analytics?.track(name: "Install Attributed", properties: properties)
     }
 }

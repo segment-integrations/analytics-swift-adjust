@@ -24,20 +24,18 @@ let package = Package(
             url: "https://github.com/segmentio/analytics-swift.git",
             from: "1.1.2"
         ),
-        .package(name: "Adjust",
-                 url: "https://github.com/adjust/ios_sdk",
-                 from: "4.33.4")
+        .package(
+            name: "Adjust",
+            url: "https://github.com/adjust/ios_sdk.git",
+            from: "4.33.4")
     ],
     targets: [
         // Targets are the basic building blocks of a package. A target can define a module or a test suite.
         // Targets can depend on other targets in this package, and on products in packages this package depends on.
         .target(
             name: "SegmentAdjust",
-            dependencies: ["Segment", .product(
-                name: "Adjust",
-                package: "Adjust")])
+            dependencies: ["Segment", "Adjust"])
         
         // TESTS ARE HANDLED VIA THE EXAMPLE APP.
     ]
 )
-

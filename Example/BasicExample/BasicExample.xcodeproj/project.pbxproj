@@ -15,7 +15,7 @@
 		46EDC71127C6B8D200B870D7 /* BasicExampleUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46EDC71027C6B8D200B870D7 /* BasicExampleUITests.swift */; };
 		46EDC71327C6B8D200B870D7 /* BasicExampleUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46EDC71227C6B8D200B870D7 /* BasicExampleUITestsLaunchTests.swift */; };
 		46EDC72127C6B92C00B870D7 /* Segment in Frameworks */ = {isa = PBXBuildFile; productRef = 46EDC72027C6B92C00B870D7 /* Segment */; };
-		EAF2029D29AF338400835D9C /* SegmentAdjust in Frameworks */ = {isa = PBXBuildFile; productRef = EAF2029C29AF338400835D9C /* SegmentAdjust */; };
+		EA230E9729C34583001FAE5D /* SegmentAdjust in Frameworks */ = {isa = PBXBuildFile; productRef = EA230E9629C34583001FAE5D /* SegmentAdjust */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,7 +55,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				46EDC72127C6B92C00B870D7 /* Segment in Frameworks */,
-				EAF2029D29AF338400835D9C /* SegmentAdjust in Frameworks */,
+				EA230E9729C34583001FAE5D /* SegmentAdjust in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -167,7 +167,7 @@
 			name = BasicExample;
 			packageProductDependencies = (
 				46EDC72027C6B92C00B870D7 /* Segment */,
-				EAF2029C29AF338400835D9C /* SegmentAdjust */,
+				EA230E9629C34583001FAE5D /* SegmentAdjust */,
 			);
 			productName = BasicExample;
 			productReference = 46EDC6F227C6B8D100B870D7 /* BasicExample.app */;
@@ -626,7 +626,7 @@
 			package = 46EDC71F27C6B92C00B870D7 /* XCRemoteSwiftPackageReference "analytics-swift" */;
 			productName = Segment;
 		};
-		EAF2029C29AF338400835D9C /* SegmentAdjust */ = {
+		EA230E9629C34583001FAE5D /* SegmentAdjust */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = SegmentAdjust;
 		};
