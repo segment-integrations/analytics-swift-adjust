@@ -180,13 +180,18 @@ extension AdjustDestination: AdjustDelegate {
             "adGroup": attribution?.adgroup ?? NSNull()
         ]
         
-        let properties: [String: Any] = [
-            "provider": "Adjust",
-            "trackerToken": attribution?.trackerToken ?? NSNull(),
-            "trackerName": attribution?.trackerName ?? NSNull(),
-            "campaign": campaign
-        ]
+        let campaignStr = (campaign.compactMap({ (key, value) -> String in
+            return "\(key)=\(value)"
+        }) as Array).joined(separator: ";")
+
+        debugPrint("campaignStr", campaignStr)
         
-       // analytics?.track(name: "Install Attributed", properties: properties)
+        let properties: [String: Codable] = [
+            "provider": "Adjust",
+            "trackerToken": attribution?.trackerToken ?? nil,
+            "trackerName": attribution?.trackerName ?? nil,
+            "campaign": campaignStr
+        ]
+        analytics?.track(name: "Install Attributed", properties: properties)
     }
 }
