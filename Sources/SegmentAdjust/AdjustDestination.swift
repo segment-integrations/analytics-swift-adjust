@@ -31,6 +31,11 @@ import Foundation
 import Segment
 import Adjust
 
+@objc(SEGAdjustDestination)
+public class ObjCSegmentAdjust: NSObject, ObjCDestination, ObjCDestinationShim {
+    public func instance() -> DestinationPlugin { return AdjustDestination() }
+}
+
 public class AdjustDestination: NSObject, DestinationPlugin {
     public let timeline = Timeline()
     public let type = PluginType.destination
