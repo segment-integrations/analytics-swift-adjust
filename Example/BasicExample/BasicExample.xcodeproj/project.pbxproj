@@ -46,7 +46,7 @@
 		46EDC70C27C6B8D200B870D7 /* BasicExampleUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BasicExampleUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		46EDC71027C6B8D200B870D7 /* BasicExampleUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicExampleUITests.swift; sourceTree = "<group>"; };
 		46EDC71227C6B8D200B870D7 /* BasicExampleUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicExampleUITestsLaunchTests.swift; sourceTree = "<group>"; };
-		EAF2029A29AF337C00835D9C /* analytics-swift-integration-adjust */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = "analytics-swift-integration-adjust"; path = ../..; sourceTree = "<group>"; };
+		EAF2029A29AF337C00835D9C /* analytics-swift-adjust */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = "analytics-swift-adjust"; path = ../..; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -137,7 +137,7 @@
 		EAF2029929AF337C00835D9C /* Packages */ = {
 			isa = PBXGroup;
 			children = (
-				EAF2029A29AF337C00835D9C /* analytics-swift-integration-adjust */,
+				EAF2029A29AF337C00835D9C /* analytics-swift-adjust */,
 			);
 			name = Packages;
 			sourceTree = "<group>";
