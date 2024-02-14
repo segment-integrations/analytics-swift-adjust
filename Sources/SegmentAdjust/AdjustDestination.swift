@@ -32,11 +32,11 @@ import Segment
 import Adjust
 
 @objc(SEGAdjustDestination)
-public class ObjCSegmentAdjust: NSObject, ObjCPlugin, ObjCPluginShim {
+open class ObjCSegmentAdjust: NSObject, ObjCPlugin, ObjCPluginShim {
     public func instance() -> EventPlugin { return AdjustDestination() }
 }
 
-public class AdjustDestination: NSObject, DestinationPlugin {
+open class AdjustDestination: NSObject, DestinationPlugin {
     public let timeline = Timeline()
     public let type = PluginType.destination
     public let key = "Adjust"
@@ -46,7 +46,7 @@ public class AdjustDestination: NSObject, DestinationPlugin {
     
     public override init() { }
     
-    public func update(settings: Settings, type: UpdateType) {
+    open func update(settings: Settings, type: UpdateType) {
         // Skip if you have a singleton and don't want to keep updating via settings.
         guard type == .initial else { return }
         
