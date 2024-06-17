@@ -27,7 +27,7 @@ let package = Package(
         .package(
             name: "Adjust",
             url: "https://github.com/adjust/ios_sdk.git",
-            from: "4.33.4")
+            from: "4.38.0")
     ],
     targets: [
         // Targets are the basic building blocks of a package. A target can define a module or a test suite.
