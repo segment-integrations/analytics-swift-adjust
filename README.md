@@ -1,6 +1,6 @@
 # Analytics-Swift Adjust
 
-Add Adjust session tracking support to your applications via this plugin for [Analytics-Swift](https://github.com/segmentio/analytics-swift)
+Add Adjust SDK support to your applications via this plugin for [Analytics-Swift](https://github.com/segmentio/analytics-swift)
 
 
 ## Adding the dependency
@@ -23,7 +23,7 @@ Open your Package.swift file and add the following do your the `dependencies` se
             from: "1.0.0"
         ),
 ```
-
+ 
 
 ## Using the Plugin in your App
 
