@@ -2,6 +2,8 @@
 
 Add Adjust SDK support to your applications via this plugin for [Analytics-Swift](https://github.com/segmentio/analytics-swift)
 
+⚠️ Github Issues disabled in this repository ⚠️
+Please direct all issues, bug reports, and feature enhancements to `friends@segment.com` so they can be resolved as efficiently as possible. 
 
 ## Adding the dependency
 
@@ -44,10 +46,6 @@ analytics.add(plugin: AdjustDestination())
 ```
 Your events will now be given Adjust session data and start flowing to Adjust via Cloud Mode.
 
-
-## Support
-
-Please use Github issues, Pull Requests, or feel free to reach out to our [support team](https://segment.com/help/).
 
 ## Integrating with Segment
 
