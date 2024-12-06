@@ -56,7 +56,7 @@ open class AdjustDestination: NSObject, DestinationPlugin {
         adjustSettings = settings
         
         var environment = ADJEnvironmentSandbox
-        if let _ = settings.setEnvironmentProduction {
+        if let isProduction = settings.setEnvironmentProduction, isProduction {
             environment = ADJEnvironmentProduction
         }
         
