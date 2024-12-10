@@ -29,7 +29,7 @@
 
 import Foundation
 import Segment
-import Adjust
+import AdjustSdk
 
 @objc(SEGAdjustDestination)
 open class ObjCSegmentAdjust: NSObject, ObjCPlugin, ObjCPluginShim {
@@ -61,29 +61,21 @@ open class AdjustDestination: NSObject, DestinationPlugin {
         }
         
         let adjustConfig = ADJConfig(appToken: settings.appToken, environment: environment)
-        
-        if let bufferingEnabled = settings.setEventBufferingEnabled {
-            adjustConfig?.eventBufferingEnabled = bufferingEnabled
-        }
-        
+
         if let _ = settings.trackAttributionData {
             adjustConfig?.delegate = self
         }
         
-        if let useDelay = settings.setDelay, useDelay == true, let delayTime = settings.delayTime {
-            adjustConfig?.delayStart = delayTime
-        }
-        
-        Adjust.appDidLaunch(adjustConfig)
+        Adjust.initSdk(adjustConfig)
     }
     
     public func identify(event: IdentifyEvent) -> IdentifyEvent? {
         if let userId = event.userId, userId.count > 0 {
-            Adjust.addSessionPartnerParameter("user_id", value: userId)
+            Adjust.addGlobalPartnerParameter("user_id", forKey: userId)
         }
         
         if let anonId = event.anonymousId, anonId.count > 0 {
-            Adjust.addSessionPartnerParameter("anonymous_id", value: anonId)
+            Adjust.addGlobalPartnerParameter("anonymous_id", forKey: anonId)
         }
         
         return event
@@ -91,7 +83,7 @@ open class AdjustDestination: NSObject, DestinationPlugin {
     
     public func track(event: TrackEvent) -> TrackEvent? {
         if let anonId = event.anonymousId, anonId.count > 0 {
-            Adjust.addSessionPartnerParameter("anonymous_id", value: anonId)
+            Adjust.addGlobalPartnerParameter("anonymous_id", forKey: anonId)
         }
         
         if let token = mappedCustomEventToken(eventName: event.event) {
@@ -123,12 +115,12 @@ open class AdjustDestination: NSObject, DestinationPlugin {
     }
     
     public func reset() {
-        Adjust.resetSessionPartnerParameters()
+        Adjust.removeGlobalPartnerParameters()
     }
 }
 extension AdjustDestination: RemoteNotifications{
     public func registeredForRemoteNotifications(deviceToken: Data) {
-        Adjust.setDeviceToken(deviceToken)
+        Adjust.setPushToken(deviceToken)
     }
 }
 // Example of versioning for your plugin
@@ -141,8 +133,10 @@ extension AdjustDestination: VersionedPlugin {
 private struct AdjustSettings: Codable {
     let appToken: String
     let setEnvironmentProduction: Bool?
+    @available(*, deprecated)
     let setEventBufferingEnabled: Bool?
     let trackAttributionData: Bool?
+    @available(*, deprecated)
     let setDelay: Bool?
     let customEvents: JSON?
     let delayTime: Double?
