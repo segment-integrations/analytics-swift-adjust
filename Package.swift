@@ -7,7 +7,7 @@ let package = Package(
     name: "SegmentAdjust",
     platforms: [
         .iOS("13.0"),
-        .tvOS("11.0"),
+        .tvOS("12.0"),
         .watchOS("7.1")
     ],
     products: [
@@ -25,16 +25,16 @@ let package = Package(
             from: "1.4.1"
         ),
         .package(
-            name: "Adjust",
+            name: "AdjustSdk",
             url: "https://github.com/adjust/ios_sdk.git",
-            from: "4.38.0")
+            from: "5.0.1")
     ],
     targets: [
         // Targets are the basic building blocks of a package. A target can define a module or a test suite.
         // Targets can depend on other targets in this package, and on products in packages this package depends on.
         .target(
             name: "SegmentAdjust",
-            dependencies: ["Segment", "Adjust"])
+            dependencies: ["Segment", "AdjustSdk"])
         
         // TESTS ARE HANDLED VIA THE EXAMPLE APP.
     ]
