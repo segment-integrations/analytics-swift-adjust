@@ -71,11 +71,11 @@ open class AdjustDestination: NSObject, DestinationPlugin {
     
     public func identify(event: IdentifyEvent) -> IdentifyEvent? {
         if let userId = event.userId, userId.count > 0 {
-            Adjust.addGlobalPartnerParameter("user_id", forKey: userId)
+            Adjust.addGlobalPartnerParameter(userId, forKey: "user_id")
         }
         
         if let anonId = event.anonymousId, anonId.count > 0 {
-            Adjust.addGlobalPartnerParameter("anonymous_id", forKey: anonId)
+            Adjust.addGlobalPartnerParameter(anonId, forKey: "anonymous_id")
         }
         
         return event
@@ -83,7 +83,7 @@ open class AdjustDestination: NSObject, DestinationPlugin {
     
     public func track(event: TrackEvent) -> TrackEvent? {
         if let anonId = event.anonymousId, anonId.count > 0 {
-            Adjust.addGlobalPartnerParameter("anonymous_id", forKey: anonId)
+            Adjust.addGlobalPartnerParameter(anonId, forKey: "anonymous_id")
         }
         
         if let token = mappedCustomEventToken(eventName: event.event) {
