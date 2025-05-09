@@ -6,8 +6,8 @@
         "repositoryURL": "https://github.com/adjust/adjust_signature_sdk.git",
         "state": {
           "branch": null,
-          "revision": "435cf025774f677c187e2cdb260383bb47d4c8ae",
-          "version": "3.35.1"
+          "revision": "93c40d7fa27b709a81adc50e41b400ce4411c7ff",
+          "version": "3.35.2"
         }
       },
       {
@@ -24,8 +24,8 @@
         "repositoryURL": "https://github.com/adjust/ios_sdk",
         "state": {
           "branch": null,
-          "revision": "c419718364e9f360c602a17a64b91c591f33fe6a",
-          "version": "5.0.1"
+          "revision": "e2d063a30318c7f8169b39f81aec627f44cf81b7",
+          "version": "5.4.0"
         }
       },
       {
